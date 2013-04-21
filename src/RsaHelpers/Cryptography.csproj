@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RsaEncrypter.cs" />
+    <Compile Include="IRsa.cs" />
+    <Compile Include="IRsaKeys.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="Rsa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RsaGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ninject.extensions.AppSettingsResolver\Ninject.extensions.AppSettingsResolver.csproj">
+      <Project>{63CB38EC-5D53-4085-8DB1-A75173C9201B}</Project>
+      <Name>Ninject.extensions.AppSettingsResolver</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

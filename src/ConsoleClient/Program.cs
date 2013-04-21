@@ -12,15 +12,24 @@ namespace ConsoleClient
     class Program
     {
 
-        private static string publicToken =
-            "<RSAKeyValue><Modulus>s6lpjspk+3o2GOK5TM7JySARhhxE5gB96e9XLSSRuWY2W9F951MfistKRzVtg0cjJTdSk5mnWAVHLfKOEqp8PszpJx9z4IaRCwQ937KJmn2/2VyjcUsCsor+fdbIHOiJpaxBlsuI9N++4MgF/jb0tOVudiUutDqqDut7rhrB/oc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+        private static Rsa _rsa;
+        class RsaKeys: IRsaKeys
+        {
+            public string PublicKey { get; private set; }
+            public string PrivateKey { get; private set; }
 
-        private static RsaEncrypter _rsaEncrypter;
-
+            public RsaKeys()
+            {
+                
+                PublicKey =
+           "<RSAKeyValue><Modulus>1TGTGmcJRlLCRXo9M38P9LDWIkBXEbKHefxQru13votIB0ODnlKPK2GOpEfJcr66pnjRdON/xcvEojKLjOFC1l1lCzrwTnCD8//aY8YmTgoxT6K4ytJrlUuEusnMzPJuZviYUSl2Takbe0vKilaztJi0nj8HlJFDC8Vu/JF/S0k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+         
+            }
+        }
         static void Main(string[] args)
         {
-             _rsaEncrypter = new RsaEncrypter(publicKey: publicToken);
-            var token = _rsaEncrypter.Encrypt("yngvebn");
+             _rsa = new Rsa(new RsaKeys());
+            var token = _rsa.Encrypt("yngvebn="+MD5.Encrypt("password"));
             string host = "http://localhost:50244/api/auth";
             var request = WebRequest.Create(host);
              request.Method = "GET";

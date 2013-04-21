@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using Api.Controllers.ViewModels;
-using Api.Infrastructure.RSA;
+using RsaHelpers;
 
 namespace Api.Controllers
 {
@@ -9,8 +9,9 @@ namespace Api.Controllers
          public ActionResult Index()
          {
              IndexViewModel ivm = new IndexViewModel();
-             ivm.PrivateRSAKey = RsaGenerator.GenerateKey(true);
-             ivm.PublicRSAKey = RsaGenerator.GenerateKey(false);
+             var keys = RsaGenerator.GenerateKeys();
+             ivm.PrivateRSAKey = keys.PrivateKey;
+             ivm.PublicRSAKey = keys.PublicKey;
              return View(ivm);
          }
     }

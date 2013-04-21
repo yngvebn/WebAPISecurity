@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{9E4EF48B-CC70-4664-907E-576008E34B3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsaHelpers", "RsaHelpers\RsaHelpers.csproj", "{A8488C22-B55C-496E-8955-90EF4CB7F219}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography", "RsaHelpers\Cryptography.csproj", "{A8488C22-B55C-496E-8955-90EF4CB7F219}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{6205F6FB-4653-4F54-A9B4-B2F72112BAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninject.extensions.AppSettingsResolver", "Ninject.extensions.AppSettingsResolver\Ninject.extensions.AppSettingsResolver.csproj", "{63CB38EC-5D53-4085-8DB1-A75173C9201B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6205F6FB-4653-4F54-A9B4-B2F72112BAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6205F6FB-4653-4F54-A9B4-B2F72112BAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6205F6FB-4653-4F54-A9B4-B2F72112BAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CB38EC-5D53-4085-8DB1-A75173C9201B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CB38EC-5D53-4085-8DB1-A75173C9201B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CB38EC-5D53-4085-8DB1-A75173C9201B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CB38EC-5D53-4085-8DB1-A75173C9201B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

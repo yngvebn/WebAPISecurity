@@ -1,0 +1,18 @@
+﻿@model Api.Controllers.ViewModels.IndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>
+    <strong>Private key</strong><br />
+    <textarea>@Model.PrivateRSAKey</textarea>
+
+</p>
+
+<p>
+    
+        <strong>Public key</strong><br />
+    <textarea>@Model.PublicRSAKey</textarea>
+
+</p>
